@@ -1,0 +1,231 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOYJbtk2qVNWkjxo7UVaSxT",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dhruvvijay/practice/blob/main/Untitled0.%20ARRAY%20IN%20PYTHON\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TlikGaedPXHQ",
+        "outputId": "eacc8eb4-4122-45f6-e57b-6dd74eb706cd"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "how many element to store inside the array2\n",
+            "\n",
+            "Enter 2 Element:5\n",
+            "6\n",
+            "\n",
+            "The array elements are\n",
+            "16"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"how many element to store inside the array\", end=\"\")\n",
+        "num=input ()\n",
+        "arr=[1]\n",
+        "print(\"\\nEnter\", num, \"Element:\", end=\"\")\n",
+        "num=int (num)\n",
+        "for i in range (num):\n",
+        "  element=input ()\n",
+        "arr. append (element)\n",
+        "print (\"\\nThe array elements are\")\n",
+        "for i in range(num):\n",
+        "  print(arr[i],end=\"\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "r_num = int(input(\"Input number of rows: \"))\n",
+        "c_num = int (input(\"Input number of columns: \"))\n",
+        "twod_arr = [[0 for col in range(c_num)] for row in range(r_num)]\n",
+        "for row in range(r_num):\n",
+        "  for col in range(c_num):\n",
+        "    twod_arr [row][col]= row*col\n",
+        "print(twod_arr)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8hMai5uSa2N3",
+        "outputId": "68cc2ed7-98ed-44b7-947d-99b352f7b5c2"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Input number of rows: 2\n",
+            "Input number of columns: 3\n",
+            "[[0, 0, 0], [0, 1, 2]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print (end=\"Enter the Size of Array: \")\n",
+        "tot = int(input ())\n",
+        "arr = [1]\n",
+        "print(end=\"Enter \" +str(tot)+ \" Elements: \")\n",
+        "for i in range(tot):\n",
+        "  arr.append (input ())\n",
+        "print (end=\"\\nEnter the Value to Delete:\")\n",
+        "val = input()\n",
+        "if val in arr:\n",
+        "  arr.remove (val)\n",
+        "  print(\"\\nThe New Array is: \")\n",
+        "  for i in range(tot -1):\n",
+        "    print (end= arr[i]+\" \")\n",
+        "else:\n",
+        "      print(\"\\nelement doesn't exist in the List!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gW1fEL2bcmgM",
+        "outputId": "241af12a-9d0a-4896-9e47-201fddbf0177"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the Size of Array: 3\n",
+            "Enter 3 Elements: 5\n",
+            "6\n",
+            "7\n",
+            "\n",
+            "Enter the Value to Delete:1\n",
+            "\n",
+            "element doesn't exist in the List!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "arr = [10, 22,38, 27,11];\n",
+        "temp = 0;\n",
+        "\n",
+        "#Displaying elements of original array\n",
+        "print(\"Elements of original array: \");\n",
+        "for i in range(0, len(arr)):\n",
+        "  print(arr[i], end=\" \");\n",
+        "#Sort the array in ascending order\n",
+        "for i in range(0, len(arr)):\n",
+        "  for j in range(i+1, len(arr)):\n",
+        "    if(arr [i] > arr[j]):\n",
+        "      temp = arr[i];\n",
+        "      arr[i] = arr[j];\n",
+        "      arr[j] = temp;\n",
+        "    print ();\n",
+        "#Displaying elements of the array after sorting\n",
+        "print (\"Elements of array sorted in ascending order: \");\n",
+        "for i in range(0, len(arr)):\n",
+        "  print(arr[i],end=\" \");"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ok6B7uh5DdGN",
+        "outputId": "dd7c7a83-eaf0-41f0-97c9-e7f08a95e577"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Elements of original array: \n",
+            "10 22 38 27 11 \n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "Elements of array sorted in ascending order: \n",
+            "10 11 22 27 38 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import array\n",
+        "arr = array. array('i', [1, 2, 3, 1, 2, 5])\n",
+        "print (\"The new created array is : \", end =\"\")\n",
+        "for i in range (0, 6):\n",
+        "  print (arr[i], end =\" \")\n",
+        "print (\"\\r\")\n",
+        "print (\"The index of 1st occurrence of 2 is : \", end =\"\")\n",
+        "print (arr.index(2))\n",
+        "print (\"The index of 1st occurrence of 1 is : \", end =\"\")\n",
+        "print(arr.index (1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7cqUz4RfGcqS",
+        "outputId": "e23d438b-9d8b-4288-80d3-3c2592b1c0fa"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The new created array is : 1 2 3 1 2 5 \r\n",
+            "The index of 1st occurrence of 2 is : 1\n",
+            "The index of 1st occurrence of 1 is : 0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
